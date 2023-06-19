@@ -20,10 +20,15 @@ const Main = () => {
             .then(res => console.log(res))
     }
 
+    const createProduct = product => {
+        axios.post('http://localhost:8000/api/products', product)
+            .then(res => console.log(res))
+    }
+
     return (
         <div className='p-10'>
             <h1 className='text-5xl bold underline'>Product Listings!</h1>
-            <ProductForm />
+            <ProductForm onSubmitProp={createProduct} initialTitle="" initialPrice="" initialDescription="" />
             {products.map((product, i) => {
                 const url = `/products/${product._id}`
                 return (<p key={i} className='m-3'>
