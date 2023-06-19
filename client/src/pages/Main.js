@@ -21,13 +21,14 @@ const Main = () => {
     }
 
     return (
-        <div className='bg-sky-950'>
+        <div className='p-10'>
+            <h1 className='text-5xl bold underline'>Product Listings!</h1>
             <ProductForm />
             {products.map((product, i) => {
                 const url = `/products/${product._id}`
-                return (<p key={i}>
-                    <Link to={url}>{product.title}</Link>
-                    <button onClick={() => { deleteProduct(product._id) }}>Delete</button>
+                return (<p key={i} className='m-3'>
+                    <Link to={url} className='m-2 hover:underline text-lg'>{product.title}</Link>
+                    <button onClick={() => { deleteProduct(product._id) }} className='bg-red-400 hover:bg-rose-600 border-black p-1 border-1 rounded-lg hover:underline hover:bold'>Delete</button>
                 </p>)
             })}
         </div>

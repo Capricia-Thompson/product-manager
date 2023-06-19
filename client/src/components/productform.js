@@ -25,20 +25,20 @@ const ProductForm = () => {
     };
 
     return (
-        <form onSubmit={onSubmitHandler}>
-            <div>
-                <label htmlFor="title">Title:</label>
-                <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <form onSubmit={onSubmitHandler} className='p-10'>
+            <div className="m-5">
+                <label htmlFor="title" className="font-bold underline mr-2">Title:</label>
+                <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} className='bg-sky-700 border-1 border-black border-solid' />
             </div>
-            <div>
-                <label htmlFor="price">Price:</label>
-                <input type="text" name="price" value={price} onChange={(e) => setPrice(e.target.value)} />
+            <div className="m-5">
+                <label htmlFor="price" className="font-bold underline mr-2">Price:</label>
+                <input type="text" name="price" value={price} onChange={(e) => setPrice(e.target.value)} className='bg-sky-700 border-3 border-black border-solid' />
             </div>
-            <div>
-                <label htmlFor="desc">Description:</label>
-                <textarea cols="50" rows="5" name="desc" value={description} onChange={(e) => setDescription(e.target.value)} />
+            <div className="m-5 align-top">
+                <label htmlFor="desc" className="font-bold underline mr-2">Description:</label>
+                <textarea cols="50" rows="5" name="desc" value={description} onChange={(e) => setDescription(e.target.value)} className='bg-sky-700 border-1 border-black border-solid' />
             </div>
-            <input type="submit" value="Send" />
+            <input type="submit" value="Send" className='bg-cyan-500 hover:bg-cyan-800 border-black p-3 border-1 rounded-lg hover:underline hover:bold' />
         </form>
     )
 }

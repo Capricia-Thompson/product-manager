@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App dark:bg-sky-950">
       <Routes>
         <Route element={<Main />} path="/" />
         <Route element={<Details />} path="/products/:id" />

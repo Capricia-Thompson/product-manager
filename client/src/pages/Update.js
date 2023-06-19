@@ -36,24 +36,24 @@ const Update = () => {
     const url = `/products/${id}`
 
     return (
-        <div>
+        <div className="p-5">
             <Link to="/">Home</Link><br />
             <Link to={url}>Back to product</Link>
             <h1>Update Product</h1>
             <form onSubmit={updateProduct}>
-                <div>
-                    <label htmlFor="title">Title:</label>
-                    <input name="title" type="text" defaultValue={title} onChange={e => { setTitle(e.target.value) }} />
+                <div className="m-5">
+                    <label htmlFor="title" className="font-bold underline mr-2">Title:</label>
+                    <input name="title" type="text" defaultValue={title} onChange={e => { setTitle(e.target.value) }} className='bg-sky-700 border-1 border-black border-solid' />
                 </div>
-                <div>
-                    <label htmlFor="price">Price:</label>
-                    <input name="price" type="text" defaultValue={price} onChange={(e) => { setPrice(e.target.value) }} />
+                <div className="m-5">
+                    <label htmlFor="price" className="font-bold underline mr-2">Price:</label>
+                    <input name="price" type="text" defaultValue={price} onChange={(e) => { setPrice(e.target.value) }} className='bg-sky-700 border-1 border-black border-solid' />
                 </div>
-                <div>
-                    <label htmlFor="description">Description:</label>
-                    <textarea name="title" type="text" defaultValue={description} cols="50" rows="5" onChange={e => { setDescription(e.target.value) }} />
+                <div className="m-5">
+                    <label htmlFor="description" className="font-bold underline mr-2">Description:</label>
+                    <textarea name="title" type="text" defaultValue={description} cols="50" rows="5" onChange={e => { setDescription(e.target.value) }} className='bg-sky-700 border-1 border-black border-solid' />
                 </div>
-                <input type="submit" value="Update" />
+                <input type="submit" value="Update" className='bg-cyan-500 hover:bg-cyan-800 border-black p-3 border-1 rounded-lg hover:underline hover:bold' />
             </form>
         </div>
     )
